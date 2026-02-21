@@ -1,31 +1,41 @@
-# YouTube Merge
+<div align="center">
 
-YouTube Merge - this is a website and a telegram bot for automatically editing videos from YouTube
+# 🎬 YouTube Merge v2
 
-YouTube Merge uses microservice architecture, for it to work, you need to include separately app_video, bot, site
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## Telegram bot settings
+**Microservice architecture for automated YouTube video merging**
 
-There is a settings.ini file in the bot folder
-In the [BOT] category, you need to specify the bot token with @botfather and the ID of the telegram
-account from which files will be sent to the bot
+</div>
 
-In the [CLIENT] category, you need to specify the API ID, API HASH, username and phone number of the
-account from which the video will be sent to the telegram bot.
-You can get API ID and API HASH for the client at https://my.telegram.org/auth
+> Three-component system: Telegram bot, web application, and video processing module. QIWI payments, Google Drive delivery via email. Telethon client for large file handling.
 
-CLIENT is needed to bypass telegram restrictions on the size of files that the bot can send.
+---
 
-To connect payments, you must receive a QIWI token https://qiwi.com/p2p-admin/transfers/api
-And paste it into [QIWI]
+## ✨ Features
 
-## Site settings
+- Telegram bot for accepting merge requests
+- Web application for browser-based access
+- Video processing and merging module
+- QIWI P2P payment integration
+- Google Drive upload + email delivery
+- Telethon client for bypassing Telegram file size limits
 
-Videos are sent to the mail via google drive, you need to create a new application in google and
-upload cleint_secrets.json to the site folder. After the first authorization, it will create token.json
-and authorization will take place automatically.
+---
 
-For the correct operation of sending letters to the mail, you need to create an application password
-in your google account and write it in the [MAIL] category in settings.ini HOST and PORT I left the default gmail
+## 🚀 Quick Start
 
-you also need to duplicate the qiwi token in settings.ini in the site folder
+```bash
+git clone https://github.com/maximosovsky/Merve-video.online-vol.2-.git
+cd Merve-video.online-vol.2-
+pip install -r requirements.txt
+# Configure settings.ini in bot/ and site/ directories
+```
+
+---
+
+## 📄 License
+
+[Maxim Osovsky](https://www.linkedin.com/in/osovsky/). Licensed under [MIT](LICENSE).
